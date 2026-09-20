@@ -1,0 +1,93 @@
+* { box-sizing: border-box; }
+html { scroll-behavior: smooth; }
+body { margin: 0; font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif; font-size: 16px; line-height: 1.5; }
+a { color: inherit; }
+.concept-notice { display: flex; justify-content: center; padding: .55rem 1rem; background: #111; color: #fff; font-size: .78rem; text-align: center; }
+.concept-notice a { margin-left: .7rem; font-weight: 750; }
+.concept-nav { display: flex; align-items: center; justify-content: space-between; gap: 1.5rem; padding: 1rem clamp(1.1rem, 4vw, 4rem); }
+.concept-nav .logo { font-size: 1.05rem; font-weight: 850; letter-spacing: -.03em; text-decoration: none; }
+.concept-nav nav { display: flex; align-items: center; gap: clamp(.8rem, 2.5vw, 2rem); }
+.concept-nav nav a { font-size: .86rem; font-weight: 700; text-decoration: none; }
+.concept-nav .nav-cta { padding: .65rem .9rem; border-radius: 999px; }
+.concept-hero { min-height: 76vh; }
+.concept-section { padding: clamp(4.5rem, 8vw, 8rem) clamp(1.1rem, 6vw, 7rem); }
+.concept-kicker { margin: 0 0 1.2rem; font-size: .78rem; font-weight: 850; letter-spacing: .11em; text-transform: uppercase; }
+.concept-section h2 { max-width: 14ch; margin: 0 0 3rem; font-size: clamp(2.6rem, 6vw, 6rem); line-height: .96; letter-spacing: -.06em; }
+.concept-footer { display: flex; justify-content: space-between; gap: 1rem; padding: 1.5rem clamp(1.1rem, 4vw, 4rem); font-size: .82rem; }
+
+/* Academia Iturrama */
+.academy { background: #f7f4ec; color: #17173b; }
+.academy .concept-nav { border-bottom: 1px solid rgba(23,23,59,.18); }
+.academy .logo b { color: #ee422d; }
+.academy .nav-cta { background: #17173b; color: white; }
+.academy-hero { display: grid; grid-template-columns: 1.2fr .8fr; align-items: stretch; }
+.academy-copy { display: flex; flex-direction: column; justify-content: center; padding: clamp(4rem, 8vw, 8rem) clamp(1.1rem, 6vw, 7rem); }
+.academy-copy h1 { max-width: 9ch; margin: 0 0 1.6rem; font-size: clamp(4.2rem, 9vw, 9.5rem); line-height: .78; letter-spacing: -.085em; }
+.academy-copy h1 em { color: #ee422d; font-family: Georgia, serif; font-weight: 400; }
+.academy-copy > p { max-width: 38rem; margin: 0 0 2rem; font-size: 1.15rem; }
+.academy-actions { display: flex; flex-wrap: wrap; gap: .7rem; }
+.academy-button { display: inline-flex; min-height: 3.2rem; align-items: center; padding: .8rem 1.1rem; border: 1px solid #17173b; border-radius: .55rem; font-weight: 800; text-decoration: none; }
+.academy-button.primary { background: #17173b; color: white; }
+.academy-side { position: relative; display: grid; place-items: center; overflow: hidden; background: #ee422d; }
+.academy-side::before { content: "HELLO · KAIXO · SALUT · HALLO · CIAO"; position: absolute; width: 160%; color: rgba(23,23,59,.24); font-size: clamp(3rem, 6vw, 6rem); font-weight: 950; line-height: 1.35; transform: rotate(-16deg); }
+.academy-badge { position: relative; z-index: 1; display: grid; width: clamp(12rem, 23vw, 19rem); aspect-ratio: 1; place-items: center; border-radius: 50%; background: #ffd74b; text-align: center; transform: rotate(5deg); }
+.academy-badge strong { max-width: 7ch; font-size: clamp(1.5rem, 3vw, 2.7rem); line-height: .95; letter-spacing: -.05em; }
+.academy-proof { display: grid; grid-template-columns: repeat(3, 1fr); background: #17173b; color: white; }
+.academy-proof article { padding: clamp(2rem, 4vw, 3.5rem); border-right: 1px solid rgba(255,255,255,.18); }
+.academy-proof article:last-child { border: 0; }
+.academy-proof strong { display: block; margin-bottom: .65rem; color: #ffd74b; font-size: clamp(2rem, 4vw, 4rem); line-height: 1; }
+.course-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: .8rem; }
+.course-card { min-height: 17rem; padding: 1.5rem; border: 1px solid rgba(23,23,59,.25); border-radius: .75rem; }
+.course-card:nth-child(2) { background: #ffd74b; }
+.course-card:nth-child(3) { background: #ee422d; }
+.course-card span { font-size: .75rem; font-weight: 850; text-transform: uppercase; }
+.course-card h3 { max-width: 8ch; margin: 5rem 0 1rem; font-size: 2rem; line-height: .95; letter-spacing: -.04em; }
+.academy-contact { background: #d8d8ff; }
+.academy-contact a { font-weight: 800; }
+.academy .concept-footer { background: #17173b; color: white; }
+
+/* César Fernández */
+.carpentry { background: #f1eee6; color: #172019; }
+.carpentry .concept-nav { background: #172019; color: #f1eee6; }
+.carpentry .logo { font-family: Georgia, serif; font-size: 1.25rem; }
+.carpentry .nav-cta { border: 1px solid #d7a96a; color: #f1eee6; }
+.carpentry-hero { position: relative; display: flex; align-items: end; overflow: hidden; min-height: 82vh; padding: clamp(3rem, 7vw, 7rem) clamp(1.1rem, 6vw, 7rem); background: #172019 url('../assets/carpinteria-hero.png') center/cover no-repeat; color: white; }
+.carpentry-hero::before { content: ""; position: absolute; inset: 0; background: linear-gradient(90deg, rgba(8,14,10,.88) 0%, rgba(8,14,10,.55) 45%, rgba(8,14,10,.08) 78%); }
+.carpentry-hero-copy { position: relative; max-width: 62rem; }
+.carpentry-hero h1 { max-width: 11ch; margin: 0 0 1.5rem; font-family: Georgia, serif; font-size: clamp(3.8rem, 8vw, 8rem); font-weight: 400; line-height: .9; letter-spacing: -.055em; }
+.carpentry-hero p { max-width: 35rem; font-size: 1.1rem; }
+.carpentry-button { display: inline-flex; margin-top: 1rem; padding: .85rem 1.15rem; border-radius: .2rem; background: #d7a96a; color: #172019; font-weight: 850; text-decoration: none; }
+.carpentry-services { display: grid; grid-template-columns: .7fr 1.3fr; gap: clamp(2rem, 7vw, 8rem); }
+.carpentry-services h2 { font-family: Georgia, serif; font-weight: 400; }
+.service-list { border-top: 1px solid #172019; }
+.service-row { display: grid; grid-template-columns: auto 1fr auto; gap: 1.2rem; align-items: center; padding: 1.4rem 0; border-bottom: 1px solid rgba(23,32,25,.25); }
+.service-row span { color: #797f79; font-size: .78rem; }
+.service-row strong { font-family: Georgia, serif; font-size: clamp(1.4rem, 3vw, 2.5rem); font-weight: 400; }
+.material-band { display: grid; grid-template-columns: 1fr 1fr; gap: 1rem; align-items: center; background: #d7a96a; }
+.material-band h2 { font-family: Georgia, serif; font-weight: 400; }
+.material-band p { max-width: 35rem; font-size: 1.1rem; }
+.grain-panel { min-height: 25rem; border-radius: 50% 1rem 1rem 50%; background: #6e472d url('../assets/carpinteria-hero.png') 82% center/cover no-repeat; }
+.carpentry-contact { background: #172019; color: #f1eee6; }
+.carpentry-contact a { color: #d7a96a; font-size: 1.2rem; font-weight: 800; }
+.carpentry .concept-footer { background: #0c110d; color: #b6beb8; }
+
+@media (max-width: 800px) {
+  .concept-nav nav a:not(.nav-cta) { display: none; }
+  .academy-hero, .carpentry-services, .material-band { grid-template-columns: 1fr; }
+  .academy-side { min-height: 24rem; }
+  .academy-proof, .course-grid { grid-template-columns: 1fr; }
+  .academy-proof article { border-right: 0; border-bottom: 1px solid rgba(255,255,255,.18); }
+  .course-card { min-height: 13rem; }
+  .course-card h3 { margin-top: 3rem; }
+  .carpentry-hero { min-height: 76vh; background-position: 62% center; }
+  .carpentry-hero::before { background: linear-gradient(0deg, rgba(8,14,10,.9), rgba(8,14,10,.2)); }
+  .grain-panel { min-height: 16rem; border-radius: 10rem 10rem 0 0; }
+}
+
+@media (max-width: 520px) {
+  .concept-notice { display: block; }
+  .concept-notice a { display: inline-block; margin-left: .25rem; }
+  .academy-copy h1 { font-size: 4.2rem; }
+  .carpentry-hero h1 { font-size: 3.6rem; }
+  .concept-footer { flex-direction: column; }
+}
