@@ -3,47 +3,81 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta name="description" content="Concepto independiente de rediseño para César Fernández S.L. creado por Iñigo Casares." />
+    <meta name="description" content="Propuesta de una web orientada a captar proyectos para César Fernández S.L." />
     <meta name="robots" content="noindex, nofollow" />
-    <title>Concepto — César Fernández S.L.</title>
-    <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%23172019'/%3E%3Cpath d='M19 18h27v8H27v7h16v8H27v7h19v8H19z' fill='%23d7a96a'/%3E%3C/svg%3E" />
+    <meta name="theme-color" content="#142019" />
+    <title>Propuesta web — César Fernández S.L.</title>
+    <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%23142019'/%3E%3Cpath d='M19 18h27v8H27v7h16v8H27v7h19v8H19z' fill='%23d5a464'/%3E%3C/svg%3E" />
     <link rel="stylesheet" href="./concepts.css" />
   </head>
   <body class="carpentry">
     <div class="concept-notice">Propuesta conceptual independiente · No es la web oficial ni un encargo de la empresa. <a href="../index.html">Volver al portfolio</a></div>
-    <header class="concept-nav">
+    <header class="site-nav">
       <a class="logo" href="#inicio">César Fernández, S.L.</a>
-      <nav aria-label="Navegación del concepto">
-        <a href="#servicios">Servicios</a><a href="#empresa">La empresa</a><a href="#contacto">Contacto</a><a class="nav-cta" href="#contacto">Pedir presupuesto</a>
-      </nav>
+      <nav aria-label="Navegación del concepto"><a href="#servicios">Qué hacemos</a><a href="#proyectos">Proyectos</a><a href="#proceso">Cómo trabajamos</a><a class="nav-cta" href="#presupuesto">Definir mi proyecto</a></nav>
     </header>
+
     <main id="inicio">
-      <section class="concept-hero carpentry-hero">
+      <section class="carpentry-hero">
         <div class="carpentry-hero-copy">
-          <p class="concept-kicker">Carpintería de madera y cubiertas · Bilbao</p>
-          <h1>Madera bien resuelta, de la estructura al último detalle.</h1>
-          <p>Diseño, fabricación y ejecución con un equipo experimentado, materiales responsables y control integral de cada obra.</p>
-          <a class="carpentry-button" href="#contacto">Cuéntanos tu proyecto</a>
+          <p class="eyebrow">Carpintería, estructuras y cubiertas · Desde 1988</p>
+          <h1>La madera no admite atajos.</h1>
+          <p>Estudiamos, proyectamos y ejecutamos cada obra con un único equipo: desde la elección de materiales y los permisos hasta la entrega final.</p>
+          <div class="hero-actions"><a class="button button-primary" href="#presupuesto">Definir mi proyecto</a><a class="button button-secondary" href="tel:+34944128525">Llamar · 94 412 85 25</a></div>
         </div>
       </section>
-      <section class="concept-section carpentry-services" id="servicios">
-        <div><p class="concept-kicker">Servicios</p><h2>Un solo equipo para toda la obra.</h2></div>
-        <div class="service-list">
-          <div class="service-row"><span>01</span><strong>Carpintería de madera</strong><b>→</b></div>
-          <div class="service-row"><span>02</span><strong>Cubiertas y estructuras</strong><b>→</b></div>
-          <div class="service-row"><span>03</span><strong>Gestión integral de obra</strong><b>→</b></div>
+
+      <section class="carpentry-stats" aria-label="Experiencia y alcance">
+        <article><strong>1988</strong><span>inicio de la actividad</span></article>
+        <article><strong>42%+</strong><span>de la actividad en cubiertas, estructuras y casas de madera</span></article>
+        <article><strong>360º</strong><span>del estudio previo a la entrega llave en mano</span></article>
+      </section>
+
+      <section class="section" id="servicios">
+        <div class="shell">
+          <div class="section-head"><div><p class="eyebrow">Empieza por tu tipo de obra</p><h2>Tres necesidades, tres recorridos claros.</h2></div><p>La propuesta deja de describir la empresa de forma genérica y permite que cada cliente se reconozca desde la primera visita.</p></div>
+          <div class="service-decision">
+            <article><span>01 · Interior y exterior</span><h3>Carpintería a medida</h3><p>Soluciones de madera para vivienda, local y obra nueva, ajustadas al uso y a los detalles del proyecto.</p></article>
+            <article><span>02 · Construcción</span><h3>Cubiertas y estructuras</h3><p>Estructuras de madera y hormigón, cubiertas y casas de madera con estudio técnico previo.</p></article>
+            <article><span>03 · Reforma</span><h3>Gestión integral</h3><p>Coordinación parcial o completa: propuesta, permisos, ejecución y entrega llave en mano.</p></article>
+          </div>
         </div>
       </section>
-      <section class="concept-section material-band" id="empresa">
-        <div><p class="concept-kicker">Oficio y responsabilidad</p><h2>La calidad empieza mucho antes del montaje.</h2><p>Selección de materiales procedentes, en su mayoría, de explotaciones medioambientalmente sostenibles y maquinaria adaptada a las necesidades de cada proyecto.</p></div>
-        <div class="grain-panel" aria-hidden="true"></div>
+
+      <section class="project-showcase" id="proyectos">
+        <div class="project-showcase-media"><img src="../assets/carpinteria-proyecto.png" alt="Concepto visual de una vivienda con estructura y cubierta de madera" /></div>
+        <div class="project-showcase-copy"><p class="eyebrow">La obra es el argumento</p><h2>Que el cliente pueda imaginar el resultado.</h2><p>Una galería de proyectos organizada por tipo de intervención mostraría detalle, materiales, alcance y solución aplicada. Es la diferencia entre decir “hacemos cubiertas” y demostrar cómo quedan.</p><div class="project-tags"><span>Cubierta de madera</span><span>Rehabilitación</span><span>Carpintería exterior</span><span>Gestión integral</span></div></div>
       </section>
-      <section class="concept-section carpentry-contact" id="contacto">
-        <p class="concept-kicker">Hablemos de tu proyecto</p>
-        <h2>Una solución clara desde el estudio previo hasta la entrega.</h2>
-        <p>Travesía Iturriaga, 9 · 48004 Bilbao<br /><a href="tel:+34944128525">94 412 85 25</a> · <a href="mailto:info@cesar-fernandez.es">info@cesar-fernandez.es</a></p>
+
+      <section class="section" id="proceso">
+        <div class="shell">
+          <div class="section-head"><div><p class="eyebrow">Menos incertidumbre</p><h2>Un proceso visible antes de pedir presupuesto.</h2></div><p>Explicar el recorrido reduce dudas, filtra mejor las consultas y transmite control sobre una obra compleja.</p></div>
+          <div class="process-grid">
+            <article><span>01</span><h3>Primera conversación</h3><p>Tipo de obra, ubicación, necesidades, ideas y plazo aproximado.</p></article>
+            <article><span>02</span><h3>Estudio y materiales</h3><p>Revisión técnica, alternativas y selección responsable de materiales.</p></article>
+            <article><span>03</span><h3>Propuesta y permisos</h3><p>Alcance claro, presupuesto y, si se necesita, gestión previa de la obra.</p></article>
+            <article><span>04</span><h3>Ejecución y entrega</h3><p>Coordinación del trabajo y seguimiento hasta el resultado final.</p></article>
+          </div>
+        </div>
+      </section>
+
+      <section class="section brief-section" id="presupuesto">
+        <div class="shell brief-wrap">
+          <div><p class="eyebrow">Consulta mejor preparada</p><h2>Define lo esencial en treinta segundos.</h2></div>
+          <div class="brief-panel">
+            <fieldset><legend>¿Qué necesitas?</legend><div class="choice-row"><button class="brief-choice active" type="button" data-brief-group="service" data-value="una obra de carpintería">Carpintería</button><button class="brief-choice" type="button" data-brief-group="service" data-value="una cubierta o estructura de madera">Cubierta o estructura</button><button class="brief-choice" type="button" data-brief-group="service" data-value="una reforma con gestión integral">Reforma integral</button></div></fieldset>
+            <fieldset><legend>¿En qué punto estás?</legend><div class="choice-row"><button class="brief-choice active" type="button" data-brief-group="stage" data-value="una idea inicial">Idea inicial</button><button class="brief-choice" type="button" data-brief-group="stage" data-value="medidas y fotografías">Medidas y fotos</button><button class="brief-choice" type="button" data-brief-group="stage" data-value="un proyecto técnico">Proyecto técnico</button></div></fieldset>
+            <div class="brief-result" id="brief-result"><strong>Tu consulta</strong><p></p><a class="brief-email" id="brief-email" href="mailto:info@cesar-fernandez.es">Enviar consulta preparada →</a></div>
+          </div>
+        </div>
+      </section>
+
+      <section class="section carpentry-contact" id="contacto">
+        <div class="shell contact-grid"><div><p class="eyebrow">Vizcaya y provincias limítrofes</p><h2>Una obra bien resuelta empieza con una conversación clara.</h2></div><aside class="contact-card"><p>Travesía Iturriaga, 9 · 48004 Bilbao</p><a href="tel:+34944128525">94 412 85 25</a><a href="mailto:info@cesar-fernandez.es">info@cesar-fernandez.es</a></aside></div>
       </section>
     </main>
-    <footer class="concept-footer"><span>César Fernández, S.L. · Concepto visual</span><span>Diseño conceptual: Iñigo Casares</span></footer>
+    <a class="mobile-contact" href="#presupuesto">Definir proyecto</a>
+    <footer class="concept-footer"><span>César Fernández, S.L. · Propuesta conceptual</span><span>Concepto y desarrollo: Iñigo Casares</span></footer>
+    <script src="./concepts.js"></script>
   </body>
 </html>

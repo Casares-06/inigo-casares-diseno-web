@@ -96,6 +96,7 @@ h1 span { color: var(--blue); }
 .concept-card::after { content: ""; position: absolute; width: 14rem; height: 14rem; right: -4rem; bottom: -5rem; border-radius: 50%; opacity: .65; }
 .concept-label { position: relative; z-index: 1; font-size: .78rem; font-weight: 800; letter-spacing: .08em; text-transform: uppercase; }
 .concept-card strong { position: relative; z-index: 1; max-width: 7ch; font-size: clamp(3rem, 6vw, 6.2rem); line-height: .82; letter-spacing: -.075em; }
+.concept-outcome { position: relative; z-index: 1; max-width: 29rem; margin: auto 0 1.5rem; font-size: .92rem; line-height: 1.45; }
 .concept-cta { position: relative; z-index: 1; display: flex; justify-content: space-between; border-top: 1px solid currentColor; padding-top: 1rem; font-weight: 750; }
 .concept-academia { background: #f4462f; color: #17173b; }
 .concept-academia::after { background: #ffd74b; }
