@@ -325,7 +325,7 @@ a:focus-visible, button:focus-visible, summary:focus-visible { outline: 3px soli
 .concept-label { position: absolute; right: 1.25rem; bottom: 1.25rem; padding: .55rem .75rem; background: rgba(12,23,16,.78); color: rgba(255,255,255,.88); font-size: .68rem; font-weight: 750; letter-spacing: .06em; backdrop-filter: blur(8px); }
 .service-link { width: fit-content; margin-top: 1.5rem; padding: .68rem .9rem; border: 0; border-radius: 999px; background: rgba(23,37,29,.08); font-size: .82rem; transition: gap .25s ease, background-color .25s ease, color .25s ease, transform .25s ease; }
 .service-decision article:nth-child(3) .service-link { border: 0; background: rgba(255,255,255,.1); }
-.service-link:hover { gap: 1.35rem; transform: translateY(-2px); background: var(--sand); color: var(--forest); }
+.service-link:hover { transform: translateY(-2px); background: var(--sand); color: var(--forest); }
 .project-tags { gap: .7rem; }
 .project-tags button { min-height: 2.9rem; padding: .65rem 1rem; border-color: rgba(255,255,255,.22); border-radius: 999px; background: rgba(255,255,255,.07); backdrop-filter: blur(8px); }
 .project-tags button:hover { transform: translateY(-2px); border-color: var(--sand); box-shadow: 0 .55rem 1.4rem rgba(0,0,0,.16); }
@@ -361,13 +361,14 @@ a:focus-visible, button:focus-visible, summary:focus-visible { outline: 3px soli
 .service-intro h2 { color: var(--forest); }
 .service-intro-copy > p:not(.eyebrow), .service-copy-inner > p:not(.eyebrow) { color: #59645b; }
 .service-image-frame, .service-intro img { min-height: 42rem; }
-.service-image-frame::before { content: ''; position: absolute; z-index: 1; inset: 0; pointer-events: none; background: linear-gradient(90deg, rgba(247,244,237,.16), transparent 18%); }
+.service-image-frame::before { content: ''; position: absolute; z-index: 1; inset: 0 auto 0 0; width: 32%; pointer-events: none; background: linear-gradient(90deg, #f7f4ed 0%, rgba(247,244,237,.72) 22%, rgba(247,244,237,.18) 68%, transparent 100%); }
 .service-decision { margin-top: 0; }
 @media (max-width: 900px) {
   .carpentry-stats { padding-inline: 1.5rem; }
   .carpentry-stats article:first-child { padding-left: 1.2rem; }
   .service-intro { min-height: 0; }
   .service-image-frame, .service-intro img { min-height: 30rem; }
+  .service-image-frame::before { inset: 0 0 auto; width: auto; height: 24%; background: linear-gradient(180deg, #f7f4ed 0%, rgba(247,244,237,.62) 35%, transparent 100%); }
 }
 @media (max-width: 600px) {
   .carpentry-stats { grid-template-columns: 1fr 1fr; padding-inline: 1rem; }
