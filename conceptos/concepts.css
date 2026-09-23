@@ -16,6 +16,7 @@ img { display: block; width: 100%; }
 .nav-cta { display: inline-flex; min-height: 2.8rem; align-items: center; padding: .6rem 1rem; border-radius: 999px; }
 .eyebrow { margin: 0 0 1.1rem; font-size: .78rem; font-weight: 900; letter-spacing: .12em; text-transform: uppercase; }
 .section { padding-block: clamp(5rem, 9vw, 9rem); }
+.section, .project-showcase { scroll-margin-top: 5rem; }
 .section-head { display: grid; grid-template-columns: .7fr 1.3fr; gap: 2rem; align-items: end; margin-bottom: clamp(2.5rem, 5vw, 5rem); }
 .section-head h2 { max-width: 13ch; margin: 0; font-size: clamp(2.8rem, 6vw, 6.2rem); line-height: .93; letter-spacing: -.065em; }
 .section-head p:last-child { max-width: 38rem; margin: 0 0 .45rem; }
@@ -100,7 +101,14 @@ img { display: block; width: 100%; }
 .carpentry { --forest: #142019; --sand: #d5a464; --paper: #f0ede5; --stone: #c8c6bc; background: var(--paper); color: var(--forest); }
 .carpentry .site-nav { background: rgba(20,32,25,.96); color: var(--paper); }
 .carpentry .logo { font-family: Georgia, serif; font-size: 1.2rem; font-weight: 400; }
+.carpentry .site-nav nav a { font-family: Arial, Helvetica, sans-serif; font-size: .87rem; font-weight: 700; letter-spacing: normal; font-variant-ligatures: none; }
 .carpentry .nav-cta { border: 1px solid var(--sand); }
+.service-intro { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, .95fr); align-items: center; gap: clamp(2rem, 6vw, 6rem); margin-bottom: clamp(2.5rem, 5vw, 5rem); }
+.service-intro h2 { max-width: 12ch; margin: 0 0 1.5rem; font-size: clamp(3.2rem, 5.1vw, 5.5rem); line-height: .98; letter-spacing: -.06em; text-wrap: balance; }
+.service-intro p:not(.eyebrow) { max-width: 33rem; margin: 0; }
+.service-intro figure { margin: 0; }
+.service-intro img { height: clamp(19rem, 32vw, 31rem); object-fit: cover; }
+.service-intro figcaption { margin-top: .55rem; color: #626a63; font-size: .78rem; }
 .carpentry-hero { position: relative; display: flex; min-height: calc(100vh - 7.15rem); align-items: end; overflow: hidden; padding: clamp(4rem, 8vw, 8rem) max(1.5rem, calc((100vw - var(--max)) / 2)); background: var(--forest) url('../assets/carpinteria-hero.png') center/cover no-repeat; color: #fff; }
 .carpentry-hero::before { content: ""; position: absolute; inset: 0; background: linear-gradient(90deg, rgba(5,10,7,.94) 0%, rgba(5,10,7,.63) 48%, rgba(5,10,7,.06) 82%); }
 .carpentry-hero-copy { position: relative; max-width: 68rem; }
@@ -119,6 +127,10 @@ img { display: block; width: 100%; }
 .service-decision span { color: #767a76; font-size: .75rem; font-weight: 850; letter-spacing: .08em; text-transform: uppercase; }
 .service-decision h3 { margin: auto 0 1rem; font-family: Georgia, serif; font-size: clamp(2.2rem, 4vw, 3.7rem); font-weight: 400; line-height: .93; }
 .service-decision p { margin: 0; }
+.service-link { display: flex; align-items: center; justify-content: space-between; gap: 1rem; margin-top: 1.5rem; padding-top: 1rem; border-top: 1px solid currentColor; font-weight: 800; text-decoration: none; }
+.service-link span { color: inherit; font-size: 1.3rem; }
+.service-link:hover { color: #9a6b31; }
+.service-decision article:nth-child(3) .service-link:hover { color: var(--sand); }
 .project-showcase { display: grid; grid-template-columns: 1.15fr .85fr; min-height: 45rem; background: var(--forest); color: #fff; }
 .project-showcase-media { min-height: 35rem; }
 .project-showcase-media img { height: 100%; object-fit: cover; }
@@ -136,17 +148,27 @@ img { display: block; width: 100%; }
 .process-grid p { margin: 0; color: #5d625e; font-size: .92rem; }
 .brief-section { background: var(--sand); }
 .brief-wrap { display: grid; grid-template-columns: .8fr 1.2fr; gap: clamp(2rem, 7vw, 7rem); }
-.brief-wrap h2 { max-width: 10ch; margin: 0; font-family: Georgia, serif; font-size: clamp(3rem, 6vw, 6rem); font-weight: 400; line-height: .92; }
+.brief-wrap h2 { max-width: 15ch; margin: 0; font-family: Georgia, serif; font-size: clamp(3rem, 4.8vw, 5rem); font-weight: 400; line-height: 1; text-wrap: balance; }
 .brief-panel { padding: clamp(1.3rem, 3vw, 2.2rem); background: var(--paper); }
 .brief-panel fieldset { margin: 0 0 1.4rem; padding: 0; border: 0; }
 .brief-panel legend { margin-bottom: .75rem; font-weight: 850; }
 .choice-row { display: flex; flex-wrap: wrap; gap: .55rem; }
 .brief-choice { padding: .7rem .85rem; border: 1px solid rgba(20,32,25,.35); background: transparent; color: var(--forest); cursor: pointer; }
 .brief-choice.active { background: var(--forest); color: #fff; }
+.service-detail { margin: .4rem 0 1.5rem; padding: 1.1rem; border: 1px solid rgba(20,32,25,.25); scroll-margin-top: 7rem; }
+.service-detail[hidden] { display: none; }
+.service-detail h3 { margin: 0 0 .8rem; font-family: Georgia, serif; font-size: 1.5rem; font-weight: 400; }
+.brief-panel label { display: grid; gap: .4rem; font-size: .86rem; font-weight: 750; }
+.brief-panel input, .brief-panel select, .brief-panel textarea { width: 100%; min-height: 2.8rem; padding: .65rem .75rem; border: 1px solid rgba(20,32,25,.38); border-radius: 0; background: #fff; color: var(--forest); font-weight: 400; }
+.brief-panel textarea { resize: vertical; }
+.brief-panel input:focus-visible, .brief-panel select:focus-visible, .brief-panel textarea:focus-visible { outline: 2px solid var(--forest); outline-offset: 2px; }
+.brief-fields { display: grid; grid-template-columns: 1fr 1fr; gap: 1rem; }
+.brief-fields .wide { grid-column: 1 / -1; }
 .brief-result { margin-top: 1.3rem; padding: 1.1rem; border-left: .3rem solid var(--sand); background: #fff; }
 .brief-result strong { display: block; margin-bottom: .35rem; }
 .brief-result p { margin: 0 0 1rem; }
 .brief-email { font-weight: 850; }
+.brief-result small { display: block; margin-top: .75rem; color: #58635b; }
 .carpentry-contact { background: var(--forest); color: #fff; }
 .carpentry-contact .contact-card { background: var(--sand); color: var(--forest); }
 .carpentry .concept-footer { background: #09100b; color: #aeb6b0; }
@@ -162,6 +184,7 @@ img { display: block; width: 100%; }
   .path-card, .service-decision article { min-height: 18rem; }
   .project-showcase { grid-template-columns: 1fr; }
   .project-showcase-media { min-height: 28rem; }
+  .service-intro { grid-template-columns: 1fr; }
 }
 
 @media (max-width: 600px) {
@@ -176,6 +199,8 @@ img { display: block; width: 100%; }
   .academy-stats, .carpentry-stats, .process-grid { grid-template-columns: 1fr; }
   .academy-stats article, .carpentry-stats article, .process-grid article, .process-grid article + article { padding: 1.5rem 1rem; border-right: 0; border-bottom: 1px solid currentColor; }
   .project-showcase-media { min-height: 22rem; }
+  .service-intro h2 { font-size: clamp(2.9rem, 12vw, 4.5rem); }
+  .brief-fields { grid-template-columns: 1fr; }
   .hero-actions .button { width: 100%; }
   .mobile-contact { position: fixed; z-index: 30; right: 1rem; bottom: 1rem; display: inline-flex; min-height: 3.2rem; align-items: center; padding: .8rem 1rem; border-radius: 999px; background: #101010; color: #fff; font-weight: 850; text-decoration: none; box-shadow: 0 .6rem 2rem rgba(0,0,0,.28); }
   .concept-footer { flex-direction: column; padding-bottom: 5rem; }

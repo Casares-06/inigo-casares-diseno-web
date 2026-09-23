@@ -35,11 +35,11 @@
 
       <section class="section" id="servicios">
         <div class="shell">
-          <div class="section-head"><div><p class="eyebrow">Qué hacemos</p><h2>La solución empieza por tu tipo de obra.</h2></div><p>Desde una pieza de carpintería hasta una cubierta o una reforma completa: cuéntanos qué necesitas y estudiaremos cómo abordarlo.</p></div>
+          <div class="service-intro"><div><p class="eyebrow">Qué hacemos</p><h2>Una solución para cada tipo de obra.</h2><p>Desde una pieza de carpintería hasta una cubierta o una reforma completa. Elige el tipo de proyecto y cuéntanos lo esencial.</p></div><figure><img src="../assets/carpinteria-hero.png" alt="Imagen conceptual de un taller de carpintería; sustituible por una fotografía real de la empresa" loading="lazy" /><figcaption>Imagen conceptual · Espacio reservado para una foto real del equipo o de una obra.</figcaption></figure></div>
           <div class="service-decision">
-            <article><span>01 · Interior y exterior</span><h3>Carpintería a medida</h3><p>Soluciones de madera para vivienda, local y obra nueva, ajustadas al uso y a los detalles del proyecto.</p></article>
-            <article><span>02 · Construcción</span><h3>Cubiertas y estructuras</h3><p>Estructuras de madera y hormigón, cubiertas y casas de madera con estudio técnico previo.</p></article>
-            <article><span>03 · Reforma</span><h3>Gestión integral</h3><p>Coordinación parcial o completa: propuesta, permisos, ejecución y entrega llave en mano.</p></article>
+            <article><span>01 · Interior y exterior</span><h3>Carpintería a medida</h3><p>Soluciones de madera para vivienda, local y obra nueva, ajustadas al uso y a los detalles del proyecto.</p><a class="service-link" href="#detalle-carpinteria" data-service-link="carpinteria">Consultar carpintería <span aria-hidden="true">↗</span></a></article>
+            <article><span>02 · Construcción</span><h3>Cubiertas y estructuras</h3><p>Estructuras de madera y hormigón, cubiertas y casas de madera con estudio técnico previo.</p><a class="service-link" href="#detalle-cubiertas" data-service-link="cubiertas">Consultar cubierta <span aria-hidden="true">↗</span></a></article>
+            <article><span>03 · Reforma</span><h3>Gestión integral</h3><p>Coordinación parcial o completa: propuesta, permisos, ejecución y entrega llave en mano.</p><a class="service-link" href="#detalle-reforma" data-service-link="reforma">Consultar reforma <span aria-hidden="true">↗</span></a></article>
           </div>
         </div>
       </section>
@@ -74,11 +74,15 @@
 
       <section class="section brief-section" id="presupuesto">
         <div class="shell brief-wrap">
-          <div><p class="eyebrow">Consulta mejor preparada</p><h2>Define lo esencial en treinta segundos.</h2></div>
+          <div><p class="eyebrow">Consulta mejor preparada</p><h2>Cuéntanos tu proyecto con claridad.</h2><p>Solo aparecen las preguntas relevantes para el tipo de trabajo que elijas.</p></div>
           <div class="brief-panel">
-            <fieldset><legend>¿Qué necesitas?</legend><div class="choice-row"><button class="brief-choice active" type="button" data-brief-group="service" data-value="una obra de carpintería">Carpintería</button><button class="brief-choice" type="button" data-brief-group="service" data-value="una cubierta o estructura de madera">Cubierta o estructura</button><button class="brief-choice" type="button" data-brief-group="service" data-value="una reforma con gestión integral">Reforma integral</button></div></fieldset>
+            <fieldset><legend>1. ¿Qué tipo de proyecto tienes?</legend><div class="choice-row"><button class="brief-choice active" type="button" data-service="carpinteria" aria-pressed="true">Carpintería</button><button class="brief-choice" type="button" data-service="cubiertas" aria-pressed="false">Cubierta o estructura</button><button class="brief-choice" type="button" data-service="reforma" aria-pressed="false">Reforma integral</button></div></fieldset>
+            <div class="service-detail" id="detalle-carpinteria" data-service-panel="carpinteria"><h3>Detalles de carpintería</h3><label>¿Dónde se instalaría?<select data-detail="carpinteria"><option value="">Selecciona una opción</option><option>Interior</option><option>Exterior</option><option>Interior y exterior</option></select></label></div>
+            <div class="service-detail" id="detalle-cubiertas" data-service-panel="cubiertas" hidden><h3>Detalles de cubierta o estructura</h3><label>¿Qué necesitas construir o reparar?<select data-detail="cubiertas"><option value="">Selecciona una opción</option><option>Cubierta nueva</option><option>Reparación o rehabilitación de cubierta</option><option>Estructura de madera</option><option>Casa de madera</option></select></label></div>
+            <div class="service-detail" id="detalle-reforma" data-service-panel="reforma" hidden><h3>Detalles de la reforma</h3><label>¿Qué alcance tendría?<select data-detail="reforma"><option value="">Selecciona una opción</option><option>Reforma parcial</option><option>Reforma integral</option><option>Rehabilitación</option><option>Aún no lo sé</option></select></label></div>
             <fieldset><legend>¿En qué punto estás?</legend><div class="choice-row"><button class="brief-choice active" type="button" data-brief-group="stage" data-value="una idea inicial">Idea inicial</button><button class="brief-choice" type="button" data-brief-group="stage" data-value="medidas y fotografías">Medidas y fotos</button><button class="brief-choice" type="button" data-brief-group="stage" data-value="un proyecto técnico">Proyecto técnico</button></div></fieldset>
-            <div class="brief-result" id="brief-result"><strong>Tu consulta</strong><p></p><a class="brief-email" id="brief-email" href="mailto:info@cesar-fernandez.es">Enviar consulta preparada →</a></div>
+            <div class="brief-fields"><label>Localidad de la obra<input id="brief-location" type="text" autocomplete="address-level2" placeholder="Por ejemplo, Bilbao" /></label><label>Plazo aproximado<select id="brief-timing"><option value="">Aún por decidir</option><option>Lo antes posible</option><option>En los próximos 3 meses</option><option>Más adelante</option></select></label><label class="wide">Cuéntanos algún detalle útil<textarea id="brief-notes" rows="4" placeholder="Medidas aproximadas, materiales, estado actual o cualquier duda"></textarea></label></div>
+            <div class="brief-result" id="brief-result"><strong>Resumen de tu consulta</strong><p></p><a class="brief-email" id="brief-email" href="mailto:info@cesar-fernandez.es">Abrir mi correo con la consulta →</a><small>Se abrirá tu aplicación de correo para que revises el mensaje antes de enviarlo. No se envía nada automáticamente.</small></div>
           </div>
         </div>
       </section>
