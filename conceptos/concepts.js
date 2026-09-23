@@ -51,3 +51,19 @@ document.querySelectorAll('[data-brief-group]').forEach((button) => {
 });
 
 updateBrief();
+
+const reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)');
+if (!reduceMotion.matches && 'IntersectionObserver' in window) {
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach((entry) => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('is-visible');
+        observer.unobserve(entry.target);
+      }
+    });
+  }, { threshold: 0.08 });
+  document.querySelectorAll('.section-head, .path-card, .benefit, .intensive-card, .b2b-card, .service-decision article, .process-grid article, .faq-list details').forEach((element) => {
+    element.classList.add('reveal');
+    observer.observe(element);
+  });
+}
