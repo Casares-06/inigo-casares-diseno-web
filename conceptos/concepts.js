@@ -37,12 +37,13 @@ const updateBrief = () => {
   const link = document.querySelector('#brief-email');
   if (!result || !link) return;
   const detail = document.querySelector(`[data-detail="${briefState.service}"]`)?.value || 'por concretar';
+  const context = document.querySelector(`[data-context="${briefState.service}"]`)?.value || 'por concretar';
   const location = document.querySelector('#brief-location')?.value.trim() || 'por concretar';
   const timing = document.querySelector('#brief-timing')?.value || 'por concretar';
   const notes = document.querySelector('#brief-notes')?.value.trim() || 'sin detalles adicionales';
   const sentence = `Quiero consultar un proyecto de ${serviceNames[briefState.service]}. Tengo ${briefState.stage}.`;
   result.querySelector('p').textContent = `${sentence} Ubicación: ${location}. Plazo: ${timing}.`;
-  const body = `Hola,\n\n${sentence}\n\nTipo de trabajo: ${detail}\nUbicación: ${location}\nPlazo: ${timing}\nDetalles: ${notes}\n\nMi nombre y teléfono:\n`;
+  const body = `Hola,\n\n${sentence}\n\nTipo de trabajo: ${detail}\nContexto: ${context}\nUbicación: ${location}\nPlazo: ${timing}\nDetalles: ${notes}\n\nMi nombre y teléfono:\n`;
   link.href = `mailto:info@cesar-fernandez.es?subject=${encodeURIComponent('Consulta de proyecto desde la propuesta web')}&body=${encodeURIComponent(body)}`;
 };
 
@@ -68,6 +69,11 @@ document.querySelectorAll('[data-service-link]').forEach((link) => {
     event.preventDefault();
     const service = link.dataset.serviceLink;
     selectService(service);
+    if (link.dataset.detailValue) {
+      const detail = document.querySelector(`[data-detail="${service}"]`);
+      detail.value = link.dataset.detailValue;
+      updateBrief();
+    }
     const target = document.querySelector(`#detalle-${service}`);
     history.replaceState(null, '', `#detalle-${service}`);
     target?.scrollIntoView({ behavior: reduceMotion.matches ? 'instant' : 'smooth', block: 'start' });
@@ -85,7 +91,7 @@ document.querySelectorAll('[data-brief-group]').forEach((button) => {
 });
 
 updateBrief();
-document.querySelectorAll('#brief-location, #brief-timing, #brief-notes, [data-detail]').forEach((field) => {
+document.querySelectorAll('#brief-location, #brief-timing, #brief-notes, [data-detail], [data-context]').forEach((field) => {
   field.addEventListener('input', updateBrief);
   field.addEventListener('change', updateBrief);
 });
