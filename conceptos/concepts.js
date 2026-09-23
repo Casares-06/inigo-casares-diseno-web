@@ -75,7 +75,6 @@ document.querySelectorAll('[data-service-link]').forEach((link) => {
       updateBrief();
     }
     const target = document.querySelector(`#detalle-${service}`);
-    history.replaceState(null, '', `#detalle-${service}`);
     target?.scrollIntoView({ behavior: reduceMotion.matches ? 'instant' : 'smooth', block: 'start' });
   });
 });
